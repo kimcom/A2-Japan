@@ -1,3 +1,82 @@
+<script type="text/javascript">
+    $(document).ready(function () {
+//	$("#dialog").dialog({
+//		autoOpen: false, modal: true, width: 400,
+//		buttons: [{text: "Закрыть", click: function () {
+//			$(this).dialog("close");
+//		}}]
+//	});
+//	$("#dialog>#text").html("Тру ля ля");
+//	$("#dialog").dialog("open");
+	width = $('.slider-box').width();						// Ширина слайдера.
+	interval = 10000;										// Интервал смены слайдов.
+
+	$('.slider img:last').clone().prependTo('.slider');     // Копия последнего слайда помещается в начало.
+	$('.slider img').eq(1).clone().appendTo('.slider');     // Копия первого слайда помещается в конец.
+	$('.slider').css('margin-left', -width);                // Контейнер .slider сдвигается влево на ширину одного слайда.
+	setInterval('animation()', interval);                    // Запускается функция animation(), выполняющая смену слайдов.
+	//		animation();
+    });
+    function animation() {
+	var margin = parseInt($('.slider').css('marginLeft'));		// Текущее смещение блока .slider
+	width = $('.slider-box').width(), // Ширина слайдера.
+		slidersAmount = $('.slider').children().length;			// Количество слайдов в слайдере.
+	if (margin !== (-width * (slidersAmount - 1)))				// Если текущий слайд не последний,
+	{
+	    margin = margin - width;                                // то значение margin уменьшается на ширину слайда.
+	} else {                                                    // Если показан последний слайд,
+	    $('.slider').css('margin-left', -width);                // то блок .slider возвращается в начальное положение,
+	    margin = -width * 2;
+	}
+	$('.slider').animate({marginLeft: margin}, 1000);           // Блок .slider смещается влево на 1 слайд.
+    }
+    ;
+</script>
+<style>
+	.slider-box{
+		width:100%;
+		height:250px;
+		margin:auto;
+		overflow:hidden;
+	}
+	.slider{
+		position: relative;
+		width: 10000px;
+		height: 250px;
+	}
+	.slider img{
+		float: left;
+		z-index: 0;
+		width: 1350px;
+		height: 100%;
+	}
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+	// слайдер "Выбора запчастей по марке автомобиля"
+	$("#car-slider-2").hide();
+	status = true;
+	time = 1000;
+
+
+	function animation() {
+	    if (status == true) {
+		$("#car-slider-1").hide();
+		$("#car-slider-2").show();
+		status = false;
+		console.log("status = false");
+	    } else {
+		$("#car-slider-2").hide();
+		$("#car-slider-1").show();
+		status = true;
+		console.log("status = true");
+	    }
+	    setInterval('animation()', time);
+	}
+
+
+    });
+</script>
 <div class="slider-box">
 	<div class="slider">
 		<img src="../img/car.jpg" class="main-car-slider">
@@ -82,81 +161,3 @@
 <div id="dialog" title="ВНИМАНИЕ!">
 	<p id='text'></p>
 </div>
-<script type="text/javascript">
-	$(document).ready(function () {
-//	$("#dialog").dialog({
-//		autoOpen: false, modal: true, width: 400,
-//		buttons: [{text: "Закрыть", click: function () {
-//			$(this).dialog("close");
-//		}}]
-//	});
-//	$("#dialog>#text").html("Тру ля ля");
-//	$("#dialog").dialog("open");
-		width = $('.slider-box').width();						// Ширина слайдера.
-		interval = 10000;										// Интервал смены слайдов.
-
-		$('.slider img:last').clone().prependTo('.slider');     // Копия последнего слайда помещается в начало.
-		$('.slider img').eq(1).clone().appendTo('.slider');     // Копия первого слайда помещается в конец.
-		$('.slider').css('margin-left', -width);                // Контейнер .slider сдвигается влево на ширину одного слайда.
-		setInterval('animation()', interval);                    // Запускается функция animation(), выполняющая смену слайдов.
-	//		animation();
-	});
-	function animation() {
-		var margin = parseInt($('.slider').css('marginLeft'));		// Текущее смещение блока .slider
-		width = $('.slider-box').width(), // Ширина слайдера.
-			slidersAmount = $('.slider').children().length;			// Количество слайдов в слайдере.
-		if (margin !== (-width * (slidersAmount - 1)))				// Если текущий слайд не последний,
-	{
-		margin = margin - width;                                // то значение margin уменьшается на ширину слайда.
-	} else {                                                    // Если показан последний слайд,
-		$('.slider').css('margin-left', -width);                // то блок .slider возвращается в начальное положение,
-		margin = -width * 2;
-	}
-	$('.slider').animate({marginLeft: margin}, 1000);           // Блок .slider смещается влево на 1 слайд.
-    };
-</script>
-<style>
-	.slider-box{
-		width:100%;
-		height:250px;
-		margin:auto;
-		overflow:hidden;
-	}
-	.slider{
-		position: relative;
-		width: 10000px;
-		height: 250px;
-	}
-	.slider img{
-		float: left;
-		z-index: 0;
-		width: 1350px;
-		height: 100%;
-	}
-</style>
-<script type="text/javascript">
-$(document).ready(function () {	
-	// слайдер "Выбора запчастей по марке автомобиля"
-	$("#car-slider-2").hide();
-	status = true;
-	time = 1000;
-	
-
-	function animation() {
-		if (status == true){
-			$("#car-slider-1").hide();
-			$("#car-slider-2").show();
-			status = false;
-			console.log("status = false");
-		}else {
-			$("#car-slider-2").hide();
-			$("#car-slider-1").show();
-			status = true;
-			console.log("status = true");
-		}		
-setInterval('animation()', time);
-}
-	
-
-});
-</script>
