@@ -1,0 +1,2 @@
+2015-05-03 15:59:41 test: access= $controller_name=main
+2015-05-03 16:00:31 route: /Controller_main/Model_main/action_index

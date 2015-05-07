@@ -1,4 +1,5 @@
-<!-- Fixed navbar -->
+<!-- Fixed navbar   -->
+<!-- navbar-default -->
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -10,7 +11,7 @@
             </button>
         </div>
 		<a class="navbar-brand pt10" href="..">
-			<img class="img-rounded h30" src="../../img/logo.png">
+			<img class="img-rounded h36" src="../../img/logo.png">
 			<?php // echo $_SESSION['company']; ?>
 		</a>
         <div class="navbar-collapse collapse">
@@ -187,7 +188,7 @@ if($_SESSION['AccessLevel'] >= 1000){
 }
 ?>
 				<li class="navbar-text mb5 font12"><?php echo $_SESSION['UserName'].'<br>'. $_SESSION['UserPost'];?></li>
-				<li><a href="/logon">Вход</a></li>
+				<li class="btn-login"><a href="/logon">Вход</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>

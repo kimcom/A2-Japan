@@ -5,7 +5,7 @@ session_start();
 if (!isset($_SESSION['sitename']))
     $_SESSION['sitename'] = 'Система анализа статистики<br/>и управления продажами. (Сокращенно САУ)<br/>Сузирье'.'&trade;';
 if (!isset($_SESSION['titlename']))
-    $_SESSION['titlename'] = 'Система анализа статистики и управления продажами компании Сузирье'.'&trade;';
+    $_SESSION['titlename'] = 'Интернет-магазин автозапчастей'.'&trade;';
 if (!isset($_SESSION['company']))
 	$_SESSION['company'] = 'a2japan™';
 if (!isset($_SESSION['dbname']))

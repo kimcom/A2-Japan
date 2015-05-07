@@ -46,9 +46,8 @@ class Route {
 //			Fn::redirectToController('logon');
 //			return;
 //		}
-//		if ($controller_name == 'css') return;
-		if ($controller_name == 'favicon.ico')
-			return;
+		if ($controller_name == 'css') return;
+		if ($controller_name == 'favicon.ico') return;
 		if (!empty($routes[2]))
 			if ($routes[2] == 'favicon.ico')
 				return;

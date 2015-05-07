@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+body {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.search {
+    display: block;
+    background: #eeeeee;
+    border-radius: 1px;
+    border: 1px solid #08C;
+    box-shadow: 0 0 10px 1px #AEAEAE;
+    /*box-shadow: -10px 10px 30px 1px black;*/
+}
+
+.navbar {
+    height: 59px;
+}
+
+.btn-login {
+    padding-top: 5px;
+}
+
+.car-slider {
+    background-color: #FFFFFF;
+/*    background: #eeeeee;*/
+    padding: 7px;
+}
+
+.car-name {
+    text-align: center;
+}
+
+.car-slide {
+    display: inline-block;
+    margin-left: 27px;
+}
+
+.mapa {
+    width: 95%;
+    height: 95%;
+    border-radius: 2px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.shadow-1 {
+    box-shadow: -5px 5px 25px 1px black;
+}
+
+clr-1 {
+    color: blue;
+}
+.mapa-hover:hover {
+    box-shadow: -5px 5px 25px 1px black;
+}

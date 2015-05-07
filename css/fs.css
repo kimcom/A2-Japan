@@ -36,6 +36,7 @@
 /*    нельзя включать!!! border:1px #AAAAAA solid;*/
     border-color: rgb(221, 221, 221);
 }
+.bcw{background-color: #FFFFFF;}
 .bc1{background-color: #00A5FF;}
 .bc2{background-color: #FFA500;}
 .bc3{background-color: #A5FF00;}
@@ -119,6 +120,8 @@
 .h150{height:150px;}
 .h400{height:400px;}
 .h100p{height:100%;}
+.h500{height: 500px;}
+.h600{height: 600px;}
 
 .fl{float:left;}
 .db{display:block;}
@@ -128,6 +131,7 @@
 .m0{margin:0 0 0 0}
 .m10{margin:10px}
 .ml0{margin-left:0px}
+.mr10{margin-right: 10px}
 .mt-10{margin-top: -10px}
 .mt0{margin-top: 0px}
 .mt2{margin-top: 2px;}
